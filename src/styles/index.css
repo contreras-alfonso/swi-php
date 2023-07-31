@@ -1,0 +1,357 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+body{
+    background-color: #f1f1f1;
+}
+
+:root{
+    --color-azul: #1C88D3;
+    --color-azul: #0a1b27;
+    --color-azul: #1C88D3;
+
+    --color-verde: rgb(10, 149, 50);
+    --color-verde-claro: rgb(27, 169, 67);
+}
+
+body::-webkit-scrollbar{
+    background-color: white;
+    width: 8px;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: var(--color-azul);
+
+}
+
+.body--no-scroll {
+    overflow: hidden;
+}
+
+a{
+    text-decoration: none;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-azul);
+    padding: 15px 20px;
+}
+
+.header_activo{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: fit-content;
+    backdrop-filter: blur(20px);
+    background: #1c87d3eb;
+    z-index: 5;
+
+}
+.header a{
+    color: white;
+}
+
+.enlace_logo{
+    font-weight: 800;
+    font-size: 25px;
+}
+
+.header .header_enlaces{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.contenido{
+    /* background-color: rgb(195, 137, 137); */
+    margin: 0 auto;
+    width: 80vw;
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    
+}
+
+.contenido_secciones{
+    /* background-color: #99bed8; */
+    display: flex;
+    flex-direction: column;
+    /* border-left: solid 5px rgb(191, 191, 191); */
+}
+
+.contenido_secciones a{
+    text-align: start;
+    padding: 10px 20px 10px 10px;
+    color: #9f9f9f;
+
+}
+
+.contenido_secciones .seccion_activa{
+    border-left: solid 5px var(--color-verde);
+    color: rgb(24, 24, 24);
+    font-weight: 800;
+}
+
+.contenido_informacion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.container_contenido{
+    /* background-color: antiquewhite; */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    border-radius: 5px;
+    padding: 40px 20px 20px 20px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: white;
+   
+}
+
+.tabla_sintomas{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla_sintomas tr{
+    border-top: solid 1px rgb(228, 228, 228);
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.tabla_sintomas tr:hover{
+    background-color: rgb(224, 224, 224);
+}
+
+.tabla_sintomas td{
+    font-size: 15px;
+}
+
+.contenedor_botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.btn_consulta{
+    padding: 12px 20px;
+    border: none;
+    background-color: var(--color-verde);
+    color: white;
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 400ms;
+}
+
+.btn_consulta:hover{
+    background-color: var(--color-verde-claro);
+}
+
+.text_tall{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.text_small{
+    font-size: 15px;
+    color: crimson;
+    font-weight: 400;
+}
+
+.categoria_tabla{
+    font-weight: 800;
+}
+
+
+
+/* -------------- contenido enfermedad */
+
+
+.contenido_enfermedad{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    border-radius: 5px;
+    padding: 40px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.titulo_enfermedad{
+    font-size: 25px;
+    font-weight: 800;
+    text-align: center;
+
+}
+
+.fuente_enfermedad{
+    font-style: italic;
+    color: #9f9f9f;
+    transition: all 400ms;
+}
+
+.fuente_enfermedad:hover{
+    color: crimson;
+}
+
+.sintomas_marcados{
+    font-weight: 700;
+}
+
+.lista_sintomas{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.fa-triangle-exclamation{
+    color: rgb(238, 170, 25);
+}
+
+.btn_realizarOtraConsulta{
+    background-color: var(--color-verde);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    padding: 15px 0;
+    transition: all 500ms;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.btn_realizarOtraConsulta:hover{
+    background-color: var(--color-verde-claro);
+}
+
+
+.container_spiner{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(17, 55, 131, 0.756);
+    backdrop-filter: blur(1px);
+    /* background: rgba(0, 0, 0, 0.691); */
+    /* background: black; */
+    display: none;
+    z-index: 500;
+
+}
+
+.fa-circle-question{
+    color: #1C88D3;
+}
+
+.swal2-title{
+    font-size: 24px;
+}
+
+
+/* -------------- contenido inicio */
+
+
+.contenido_informacion_inicio{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.container_contenido_inicio{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.container_contenido_inicio_info{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 20px 20px 50px;
+    /* line-height: 25px; */
+    /* letter-spacing: 1px; */
+    width: 45%;
+    font-size: 18px;
+}
+
+.container_contenido_inicio_info li{
+    margin-top: 10px;
+}
+
+.container_contenido_inicio_img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.container_contenido_inicio_img img{
+    /* width: 100%; */
+    width: 80%;
+    /* height: 100%; */
+    height: 80%;
+}
+
+.titulo_verificar_sintomas{
+    line-height: 35px;
+    font-weight: 700;
+    font-size: 30px;
+    font-size: 25px;
+    margin: 15px 0;
+}
+
+.container_lista_enfermedades{
+    padding: 20px 20px 20px 50px;
+}
+
+.contenido_informacion_inicio_libro{
+    margin-top: 30px;
+    padding: 20px 20px 20px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.icono_check{
+    color: rgb(38, 150, 38);
+}
+.sintoma_check{
+    margin: 18px 0;
+    padding-bottom: 15px;
+    border-bottom: solid 1px #e1e1e1;
+    font-size: 17px;
+}
+
+.acerca_verificador{
+    font-size: 16px;
+    font-weight: 700;
+    color: #424242;
+}
